@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1 style="text-align:center">Калькулятор рассчета потерь на участке ВОЛС</h1>
+
+   
+    <table align="center">
+        <tr>
+            <td><label>Длина оптической линии связи</label></td>
+            <td><input type="text" id="lineLength"></td>
+        </tr>
+        <tr>
+            <td><label>Строительная длина оптоволокна</label></td>
+            <td><input type="text" id="constructLength"></td>
+        </tr>
+        <tr>
+            <td><label>Коэффициент затухания волокна</label></td>
+            <td><input type="text" value="" id="attenuationCoeff"></td>
+        </tr>
+        <tr>
+            <td><label>Потери на сварном соединении</label></td>
+            <td><input disabled type="text" value="0.05" id="weldedLosses"></td>
+        </tr>
+        <tr>
+            <td><label>Количество разъёмных соединений</label></td>
+            <td><input type="text" id="connectionsNumber"></td>
+        </tr>
+        <tr>
+            <td><label>Потери на разъёмных соединниях</label></td>
+            <td><input type="text" value="0.5" id="connectionLosses"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><button onclick="getResult()">Рассчитать</button></td>
+        </tr>
+        <tfoot>
+            <td colspan="2" align="center"><div id="dat"></div></td>
+        </tfoot>
+    </table>
+    <br>
+    <br>
+
+    
+
+    <script src="javascript/main.js">
+    </script>
+</body>
+</html>
