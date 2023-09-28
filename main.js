@@ -15,5 +15,6 @@ function getResult() {
     var A = calc(L, l, a, wdl, conn, conl)
     console.log(A)
 
-    document.getElementById("dat").innerHTML = "Потери на линии составят " + A + " дБ"
+    var resText = "Потери на линии составят " + A + " дБ"
+    document.getElementById("dat").innerHTML = resText
 }
