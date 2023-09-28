@@ -15,5 +15,5 @@ function getResult() {
     var A = calc(L, l, a, wdl, conn, conl)
     console.log(A)
 
-    document.getElementById("dat").innerHTML = A
+    document.getElementById("dat").innerHTML = A + " дБ"
 }
