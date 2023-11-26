@@ -3,40 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ВОЛС Калькулятор</title>
+    <style>
+        body {
+            background-color: #283E4A;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        table {
+            margin: 0 auto;
+            background-color: #314951;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        label {
+            color: #DCE2E8;
+        }
+
+        input[type="text"] {
+            width: 200px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            background-color: #7395AE;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #B9D7EA;
+        }
+
+        #dat {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-        <h1 style="text-align:center">Калькулятор рассчета потерь на участке ВОЛС</h1>
+    <h1>Калькулятор рассчета потерь на участке ВОЛС</h1>
 
-   
-    <table align="center">
+    <!-- Форма для ввода параметров -->
+    <table>
+        <!-- Длина оптической линии связи -->
         <tr>
             <td align="right"><label>Длина оптической линии связи, км:</label></td>
             <td><input type="text" id="lineLength"></td>
         </tr>
+        <!-- Строительная длина оптоволокна -->
         <tr>
             <td align="right"><label>Строительная длина оптоволокна, км:</label></td>
             <td><input type="text" id="constructLength"></td>
         </tr>
+        <!-- Коэффициент затухания волокна -->
         <tr>
             <td align="right"><label>Коэффициент затухания волокна, дБ/км:</label></td>
             <td><input type="text" value="" id="attenuationCoeff"></td>
         </tr>
+        <!-- Потери на сварном соединении -->
         <tr>
             <td align="right"><label>Потери на сварном соединении, дБ:</label></td>
             <td><input disabled type="text" value="0.05" id="weldedLosses"></td>
         </tr>
+        <!-- Количество разъёмных соединений -->
         <tr>
             <td align="right"><label>Количество разъёмных соединений</label></td>
             <td><input type="text" id="connectionsNumber"></td>
         </tr>
+        <!-- Потери на разъёмных соединениях -->
         <tr>
             <td align="right"><label>Потери на разъёмных соединениях, дБ:</label></td>
             <td><input type="text" value="0.5" id="connectionLosses"></td>
         </tr>
+        <!-- Кнопка для рассчета -->
         <tr>
             <td colspan="2" align="center"><button onclick="getResult()">Рассчитать</button></td>
         </tr>
+        <!-- Результат рассчета -->
         <tfoot>
             <td colspan="2" align="center"><div id="dat"></div></td>
         </tfoot>
@@ -44,9 +101,7 @@
     <br>
     <br>
 
-    
-
-    <script src="main.js">
-    </script>
+    <!-- Подключение скрипта -->
+    <script src="main.js"></script>
 </body>
 </html>
